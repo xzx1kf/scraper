@@ -18,7 +18,16 @@
             <sources>
                 <include name="${basename}.cs"/>
             </sources>
+            <references basedir="References">
+                <include name="HtmlAgilityPack.dll" />
+            </references>
         </csc>
+        <copy todir="bin">
+            <fileset basedir="References">
+                <include name="*.dll" />
+                <include name="*.xml" />
+            </fileset>
+        </copy>
     </target>
 
     <!--
