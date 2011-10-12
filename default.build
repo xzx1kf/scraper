@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="Hello World" default="build">
+    <property name="basename" value="Scraper"/>
+    <property name="debug" value="true"/>
+
+    <target name="clean">
+        <delete>
+            <fileset>
+                <include name="bin/${basename}.exe"/>
+                <include name="bin/${basename}.pdb"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="build">
+        <mkdir dir="bin" />
+        <csc target="exe" output="bin/${basename}.exe" debug="${debug}">
+            <sources>
+                <include name="${basename}.cs"/>
+            </sources>
+        </csc>
+    </target>
+
+    <!--
+    <target name="run" depends="build">
+        <exec program="bin/${basename}.exe" basedir="."/>
+    </target>
+    -->
+</project>

@@ -1,0 +1,4 @@
+Present information from GoonersGuide and H2HStats about the upcoming 
+premiership games in a readable format. 
+
+C# is the preferred language.
