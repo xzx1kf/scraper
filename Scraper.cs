@@ -1,17 +1,11 @@
 using HtmlAgilityPack;
+using System;
 
 public class Scraper
 {
-    public static string ScreenScraper(string url)
-    {
-        return new System.Net.WebClient().DownloadString(url);
-    }
-
     public static void Main()
     {
-        string url = "http://www.4guysfromrolla.com";
-//        string html = ScreenScraper("http://www.google.co.uk");
-//        System.Console.WriteLine(html);
+        string url = "http://www.goonersguide.com/numbers_spreadsheet.htm";
 
         HtmlWeb webGet = new HtmlWeb();
         var document = webGet.Load(url);
